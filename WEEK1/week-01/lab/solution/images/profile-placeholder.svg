@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240" role="img" aria-labelledby="title desc">
+  <title id="title">Profile placeholder image</title>
+  <desc id="desc">A simple placeholder image for a beginner portfolio webpage.</desc>
+  <rect width="400" height="240" fill="#f2f2f2"/>
+  <circle cx="200" cy="92" r="42" fill="#c9d6df"/>
+  <path d="M120 214c10-48 42-76 80-76s70 28 80 76" fill="#c9d6df"/>
+  <text x="200" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#333">Portfolio Image</text>
+</svg>

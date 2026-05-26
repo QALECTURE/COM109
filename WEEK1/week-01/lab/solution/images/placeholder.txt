@@ -1,0 +1,10 @@
+This folder is for portfolio images.
+
+Students can replace this placeholder with a real image file, for example:
+
+- profile-placeholder.jpg
+- portfolio-photo.png
+- project-screenshot.jpg
+
+Remember to update the image path in index.html if the filename changes.
+

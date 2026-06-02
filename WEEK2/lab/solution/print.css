@@ -1,0 +1,59 @@
+/* Print-friendly version of the cafe menu */
+* {
+  box-shadow: none;
+  text-shadow: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  background: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-card {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: #ffffff;
+}
+
+.site-header,
+.site-footer {
+  text-align: left;
+}
+
+h1,
+h2,
+.price,
+.subtitle {
+  color: #000000;
+}
+
+.divider {
+  background-color: #000000;
+}
+
+.menu-item {
+  break-inside: avoid;
+  padding: 6px 0;
+  border-bottom: 1px solid #999999;
+}
+
+.menu-item:hover {
+  background-color: transparent;
+  transform: none;
+}
+
+.site-footer {
+  margin-top: 24px;
+  border-top: 1px solid #000000;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}

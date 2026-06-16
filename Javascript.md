@@ -2,18 +2,17 @@
 
 ## Learning Outcomes
 
-By the end of this session students should be able to:
+By the end of this session, students should be able to:
 
-- Understand the role of JavaScript in modern web applications
-- Explain the relationship between HTML, CSS and JavaScript
-- Understand the Document Object Model (DOM)
-- Create and use variables
-- Understand basic JavaScript data types
-- Use arithmetic operators
-- Display information using console.log()
-- Respond to user events
-- Understand the difference between let and const
-- Understand the concept of variable scope
+* Explain the purpose of JavaScript in modern websites
+* Understand how JavaScript works alongside HTML and CSS
+* Use the browser console
+* Create and use variables
+* Understand basic data types
+* Perform calculations using operators
+* Create and call functions
+* Respond to user interactions
+* Understand the basics of the DOM
 
 ---
 
@@ -26,20 +25,19 @@ HTML = Structure
 CSS = Styling
 ```
 
-This week we finally learn:
+Today we learn:
 
 ```text
 JavaScript = Behaviour
 ```
 
-JavaScript is what makes websites interactive.
-
 Without JavaScript:
 
-- Instagram cannot like posts
-- Amazon cannot update baskets instantly
-- Netflix menus cannot open dynamically
-- Gmail cannot refresh content without reloading
+* Instagram cannot like posts
+* Amazon cannot update basket totals instantly
+* Netflix menus cannot open dynamically
+* Google Maps cannot respond to user actions
+* Gmail cannot refresh messages without reloading
 
 Think of JavaScript as:
 
@@ -47,102 +45,51 @@ Think of JavaScript as:
 
 ---
 
-# Class Opening (5 Minutes)
+# Technical Fun Facts
 
-Walk in and ask:
+### Fun Fact 1
 
-### Question 1
-
-What happens when you click "Like" on Instagram?
-
-Students:
-
-> It likes the post.
-
-Then ask:
-
-> Does HTML do that?
-
-Answer:
-
-> No.
+JavaScript was created in only **10 days** by Brendan Eich in 1995.
 
 ---
 
-### Question 2
-
-What happens when Amazon updates your basket total instantly?
-
-Students:
-
-> It changes.
-
-Ask:
-
-> Is that CSS?
-
-Answer:
-
-> No.
-
----
-
-### Question 3
-
-What makes Netflix show a menu when you hover?
-
-Students:
-
-> JavaScript.
-
-Then say:
-
-> Today we learn the language that powers almost every modern website.
-
----
-
-# Fun Facts
-
-## Fun Fact 1
+### Fun Fact 2
 
 JavaScript runs on:
 
-- Netflix
-- Amazon
-- YouTube
-- Instagram
-- TikTok
-- Google Maps
+* Netflix
+* Amazon
+* TikTok
+* YouTube
+* Instagram
+* Google Maps
+* Facebook
 
 Almost every modern website uses JavaScript.
 
 ---
 
-## Fun Fact 2
+### Fun Fact 3
 
-JavaScript was created in only:
-
-```text
-10 days
-```
-
-by Brendan Eich in 1995.
-
----
-
-## Fun Fact 3
-
-JavaScript and Java are completely different technologies.
+JavaScript and Java are completely different.
 
 ```text
 Java ≠ JavaScript
 ```
 
-The names sound similar but they are different programming languages.
+The names are similar, but they are different technologies.
 
 ---
 
-# The Big Picture
+### Fun Fact 4
+
+Over 98% of websites use JavaScript.
+
+That means almost every website your students visit daily uses JavaScript.
+
+---
+
+# Big Picture
 
 Draw this diagram:
 
@@ -166,6 +113,8 @@ Behaviour
 
 # Real World Analogy
 
+Imagine a car.
+
 ```text
 Car
 
@@ -182,21 +131,85 @@ Engine
 JavaScript
 ```
 
-Without the engine, the car looks nice but does not do anything useful.
+Without an engine, the car looks nice but cannot move.
+
+Without JavaScript, a webpage looks nice but cannot respond to users.
+
+---
+
+# Teaching Order
+
+For beginners we learn concepts in this order:
+
+```text
+1. What is JavaScript?
+
+2. Script Tag
+
+3. Console.log()
+
+4. Variables
+
+5. Data Types
+
+6. Operators
+
+7. Functions
+
+8. Events
+
+9. DOM
+
+10. Simple Counter Example
+```
 
 ---
 
 # Section 1 – What is JavaScript?
 
-## Simple Explanation
+## Ask Students
+
+What happens when you click "Like" on Instagram?
+
+Students:
+
+> It likes the post.
+
+Ask:
+
+> Does HTML do that?
+
+Answer:
+
+> No.
+
+---
+
+What happens when Amazon updates your basket total instantly?
+
+Students:
+
+> It changes.
+
+Ask:
+
+> Is that CSS?
+
+Answer:
+
+> No.
+
+---
+
+Explain:
 
 JavaScript allows websites to:
 
-- React
-- Calculate
-- Update
-- Validate
-- Interact
+* React
+* Calculate
+* Update
+* Validate
+* Interact
 
 ---
 
@@ -208,7 +221,7 @@ JavaScript allows websites to:
 Like Button
 ```
 
-Powered by JavaScript.
+JavaScript.
 
 ---
 
@@ -218,265 +231,57 @@ Powered by JavaScript.
 Basket Total Updates
 ```
 
-Powered by JavaScript.
+JavaScript.
 
 ---
 
 ### Netflix
 
 ```text
-Recommendations
+Movie Recommendations
 ```
 
-Powered by JavaScript.
+JavaScript.
 
 ---
 
 ### Gmail
 
 ```text
-Refresh Inbox Without Reloading
+Refresh Inbox Without Reload
 ```
 
-Powered by JavaScript.
+JavaScript.
 
 ---
 
-## Question for Students
+# Section 2 – JavaScript in HTML
 
-Can HTML perform any of these tasks by itself?
-
-Answer:
-
-> No.
-
----
-
-# Section 2 – Client-Side vs Server-Side JavaScript
-
-## Client Side
-
-Runs inside the browser.
-
-```text
-Browser
-|
-JavaScript
-|
-Runs Here
-```
-
-Example:
-
-```text
-Password Length Validation
-```
-
-The browser checks immediately.
-
----
-
-## Server Side
-
-Runs on a server.
-
-```text
-Browser
-|
-Server
-|
-JavaScript (Node.js)
-```
-
-Example:
-
-```text
-Login Verification
-```
-
-The server verifies credentials.
-
----
-
-# Section 3 – The DOM (Document Object Model)
-
-## What is the DOM?
-
-The DOM is the browser's internal representation of a webpage.
-
-Think of it as:
-
-> A map of the webpage.
-
----
-
-## DOM Structure
-
-```text
-html
-
-|
-+-- head
-
-|
-+-- body
-
-    |
-    +-- h1
-
-    |
-    +-- p
-
-    |
-    +-- button
-```
-
----
-
-## Real World Analogy
-
-```text
-Website = House
-
-DOM = House Blueprint
-```
-
-The DOM shows where everything is located.
-
----
-
-## JavaScript and DOM
-
-JavaScript uses the DOM to find and change elements.
-
-Example:
-
-```javascript
-document.getElementById("title")
-```
-
-Meaning:
-
-> Find the element with the ID "title".
-
----
-
-## Student Question
-
-If JavaScript cannot find a button, can it change the button?
-
-Answer:
-
-> No.
-
----
-
-# Section 4 – Objects
-
-Everything in JavaScript is based around objects.
-
----
-
-## Phone Example
-
-### Properties
-
-```text
-Colour
-Size
-Brand
-```
-
----
-
-### Methods
-
-```text
-Call()
-Text()
-```
-
----
-
-## Button Example
-
-### Properties
-
-```text
-Text
-Colour
-Size
-```
-
----
-
-### Methods
-
-```text
-Click()
-Focus()
-```
-
----
-
-# Section 5 – Events
-
-## What is an Event?
-
-An event is something that happens on a webpage.
-
-Examples:
-
-- Mouse click
-- Key press
-- Page load
-- Mouse hover
-
----
-
-## Event Flow
-
-```text
-User Clicks
-
-↓
-
-Event
-
-↓
-
-JavaScript Runs
-
-↓
-
-Action Happens
-```
-
----
-
-## Example
+Show students:
 
 ```html
-<button onclick="sayHello()">
-Click Me
-</button>
+<script>
+
+alert("Hello COM109");
+
+</script>
+```
+
+Explain:
+
+```text
+HTML
+=
+Structure
+
+JavaScript
+=
+Instructions
 ```
 
 ---
 
-## Real World Examples
-
-| Event | Website Example |
-|---------|---------|
-| Click | Add To Cart |
-| Hover | Netflix Menu |
-| KeyPress | Search Box |
-| Load | Homepage Loading |
-| Resize | Responsive Design |
-
----
-
-# Live Demo 1
+# First JavaScript Program
 
 ```html
 <button onclick="alert('Hello')">
@@ -484,27 +289,91 @@ Click Me
 </button>
 ```
 
+When the button is clicked:
+
+1. User performs action
+2. JavaScript runs
+3. Browser responds
+
 ---
 
-# Section 6 – Variables
+# Section 3 – Console
+
+Before writing complex programs, developers use the Console.
+
+Open:
+
+```text
+Right Click
+
+↓
+
+Inspect
+
+↓
+
+Console
+```
+
+---
+
+Run:
+
+```javascript
+console.log("Hello World");
+```
+
+---
+
+Run:
+
+```javascript
+console.log("COM109");
+```
+
+---
+
+Run:
+
+```javascript
+console.log("JavaScript");
+```
+
+---
+
+## Student Activity
+
+Ask every student to print:
+
+* Their name
+* Their favourite food
+* Their favourite app
+
+using `console.log()`.
+
+---
+
+# Section 4 – Variables
 
 ## What is a Variable?
 
-A variable is a container that stores information.
+A variable stores information.
+
+Think of a variable as a labelled box.
 
 ---
 
-## Real World Analogy
+Draw:
 
 ```text
-Name Box
+BOX
 
 [Vishnu]
 ```
 
 ---
 
-## Example
+Example:
 
 ```javascript
 let name = "Vishnu";
@@ -512,64 +381,69 @@ let name = "Vishnu";
 
 ---
 
-### Age
+Explain:
 
-```javascript
-let age = 27;
+```text
+Variable Name
+=
+name
+
+Stored Value
+=
+Vishnu
 ```
 
 ---
 
-### Bank Balance
+More Examples
 
 ```javascript
-let balance = 1500;
+let age = 20;
+```
+
+```javascript
+let city = "London";
+```
+
+```javascript
+let university = "QA";
 ```
 
 ---
 
-## Real World Examples
-
-### Instagram
+Display values:
 
 ```javascript
-let likes = 500;
+console.log(name);
+console.log(age);
+console.log(city);
 ```
 
 ---
 
-### Amazon
+## Student Activity
+
+Create variables:
 
 ```javascript
-let basketTotal = 99.99;
+let favouriteMovie
+let favouriteFood
+let favouriteSport
 ```
+
+Then print them.
 
 ---
 
-## Student Question
+# Section 5 – Data Types
 
-What variables might Netflix use?
-
-Examples:
-
-```javascript
-let movieTitle;
-let userName;
-```
-
----
-
-# Section 7 – Data Types
-
-## Number
-
-```javascript
-let age = 27;
-```
+JavaScript stores different kinds of data.
 
 ---
 
 ## String
+
+Text.
 
 ```javascript
 let name = "John";
@@ -577,27 +451,69 @@ let name = "John";
 
 ---
 
-## Boolean
+## Number
+
+Numeric values.
 
 ```javascript
-let loggedIn = true;
+let age = 20;
 ```
 
 ---
 
-## NaN
+## Boolean
 
-Means:
+True or False.
 
-```text
-Not a Number
+```javascript
+let isStudent = true;
 ```
-
-Occurs when JavaScript cannot perform a valid numeric calculation.
 
 ---
 
-# Section 8 – Operators
+## Ask Students
+
+What type is:
+
+```javascript
+"Netflix"
+```
+
+Answer:
+
+String.
+
+---
+
+What type is:
+
+```javascript
+99
+```
+
+Answer:
+
+Number.
+
+---
+
+What type is:
+
+```javascript
+false
+```
+
+Answer:
+
+Boolean.
+
+---
+
+# Section 6 – Operators
+
+Operators perform calculations.
+
+---
 
 ## Addition
 
@@ -631,7 +547,7 @@ Occurs when JavaScript cannot perform a valid numeric calculation.
 
 ---
 
-## Modulus (Remainder)
+## Modulus
 
 ```javascript
 15 % 9
@@ -647,164 +563,228 @@ Result:
 
 ## Real World Example
 
+Amazon Basket:
+
 ```javascript
-basketTotal + deliveryCharge
+let basketTotal = 100;
+let deliveryCharge = 5;
+
+console.log(basketTotal + deliveryCharge);
 ```
 
-Used in ecommerce websites.
+---
+
+## Student Activity
+
+Calculate:
+
+```javascript
+let maths = 80;
+let science = 70;
+
+console.log(maths + science);
+```
 
 ---
 
-# Section 9 – Console
+# Section 7 – Functions
 
-## What is the Console?
+## What is a Function?
 
-The console is where developers communicate with the browser.
+A function is a reusable set of instructions.
 
 ---
 
-## Open Console
+Real World Analogy:
 
 ```text
-Right Click
+Microwave Button
+
+Press Button
+
 ↓
 
-Inspect
-↓
-
-Console
+Instructions Run
 ```
 
 ---
 
-## Example
+Example:
 
 ```javascript
-console.log("Hello");
+function sayHello() {
+
+    console.log("Hello");
+
+}
 ```
 
 ---
 
-## Example 2
+Run the function:
 
 ```javascript
-let age = 27;
-
-console.log(age);
+sayHello();
 ```
 
 ---
 
-# Section 10 – let vs const
-
-## let
-
-Can be changed.
+Another Example:
 
 ```javascript
-let score = 10;
+function greet() {
 
-score = 20;
+    console.log("Welcome COM109");
+
+}
 ```
 
 ---
 
-## const
+## Student Activity
 
-Cannot be changed.
+Create:
 
 ```javascript
-const pi = 3.14;
+function introduceMe() {
+
+    console.log("My name is _____");
+
+}
 ```
 
----
-
-## Real World Example
-
-```javascript
-const university = "QA";
-```
-
-The university name remains constant.
+Then run it.
 
 ---
 
-# Section 11 – Scope
+# Section 8 – Events
 
-## Simple Explanation
+An event is something that happens on a webpage.
 
-Scope determines where a variable can be accessed.
+Examples:
 
----
-
-## Local Scope
-
-Accessible only within a function.
-
----
-
-## Global Scope
-
-Accessible throughout the program.
+* Click
+* Hover
+* Key Press
+* Page Load
+* Resize
 
 ---
 
-## Real World Analogy
+Draw:
 
 ```text
-Local Scope
+User Clicks
 
-Your Bedroom
+↓
 
-Global Scope
+Event
 
-Entire House
+↓
+
+JavaScript Runs
+
+↓
+
+Action Happens
 ```
 
 ---
 
-# Live Coding Session
-
-## Demo 1
+Example:
 
 ```html
 <button onclick="sayHello()">
 Click Me
 </button>
-
-<script>
-
-function sayHello() {
-    alert("Hello COM109");
-}
-
-</script>
 ```
 
 ---
 
-## Demo 2
+Real World Examples
+
+| Event     | Website Example   |
+| --------- | ----------------- |
+| Click     | Add To Cart       |
+| Hover     | Netflix Menu      |
+| Key Press | Search Box        |
+| Load      | Homepage Loading  |
+| Resize    | Responsive Layout |
+
+---
+
+# Section 9 – DOM
+
+The DOM is one of the most important JavaScript concepts.
+
+---
+
+## What is DOM?
+
+DOM stands for:
+
+```text
+Document Object Model
+```
+
+---
+
+Think of the DOM as:
+
+> A map of the webpage.
+
+---
+
+Draw:
+
+```text
+html
+
+|
++-- head
+
+|
++-- body
+
+    |
+    +-- h1
+
+    |
+    +-- p
+
+    |
+    +-- button
+```
+
+---
+
+Real World Analogy:
+
+```text
+Website = House
+
+DOM = Blueprint
+```
+
+---
+
+JavaScript uses the DOM to find and modify elements.
+
+Example:
 
 ```javascript
-let age = 20;
-
-console.log(age);
+document.getElementById("title")
 ```
+
+Meaning:
+
+> Find the element called title.
 
 ---
 
-## Demo 3
+# Section 10 – Simple Counter Example
 
-```javascript
-let x = 10;
-let y = 5;
-
-console.log(x + y);
-```
-
----
-
-## Demo 4
+This is similar to Instagram likes.
 
 ```javascript
 let likes = 0;
@@ -818,22 +798,117 @@ function addLike() {
 }
 ```
 
-Students love watching the counter increase.
+---
+
+Students immediately understand:
+
+```text
+Click
+
+↓
+
+JavaScript Runs
+
+↓
+
+Number Changes
+
+↓
+
+Updated Result
+```
 
 ---
 
-# Seminar Introduction
+# Live Coding Session
+
+## Demo 1
+
+```html
+<button onclick="alert('Hello')">
+Click Me
+</button>
+```
+
+---
+
+## Demo 2
+
+```javascript
+console.log("Hello COM109");
+```
+
+---
+
+## Demo 3
+
+```javascript
+let age = 20;
+
+console.log(age);
+```
+
+---
+
+## Demo 4
+
+```javascript
+let x = 10;
+let y = 5;
+
+console.log(x + y);
+```
+
+---
+
+## Demo 5
+
+```javascript
+function greet() {
+
+    console.log("Welcome");
+
+}
+
+greet();
+```
+
+---
+
+## Demo 6
+
+```javascript
+let likes = 0;
+
+function addLike() {
+
+    likes++;
+
+    console.log(likes);
+
+}
+```
+
+---
+
+# Seminar Preparation
 
 Today's practical focuses on:
 
 ```text
 Variables
+
 ↓
 
 Operators
+
 ↓
 
 Console
+
+↓
+
+Functions
 
 ↓
 
@@ -844,39 +919,33 @@ Events
 Debugging
 ```
 
-You will create JavaScript variables, perform calculations, handle events and fix common JavaScript errors.
-
 ---
 
 # Key Concepts To Remember
 
-If you understand these concepts, you have mastered the foundations of JavaScript:
+If students understand these concepts, the week is a success:
 
 1. What JavaScript is
-2. DOM
-3. Events
-4. Variables
-5. Data Types
-6. Operators
-7. Console.log()
-8. let vs const
+2. Console.log()
+3. Variables
+4. Data Types
+5. Operators
+6. Functions
+7. Events
+8. DOM
 
-These concepts form the foundation for:
+Everything else later becomes easier:
 
-- Functions
-- Arrays
-- Loops
-- Objects
-- jQuery
-- React
-- Angular
-- Modern Web Development
+* Arrays
+* Loops
+* Objects
+* jQuery
+* React
+* Angular
 
 ---
 
 # End of Lecture Summary
-
-Today we learned:
 
 ```text
 HTML

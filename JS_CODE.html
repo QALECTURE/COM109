@@ -1,1 +1,394 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>COM109 Week 4 - JavaScript Demo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            line-height: 1.6;
+        }
+
+        section {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 8px 14px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        input {
+            padding: 8px;
+            margin: 5px;
+        }
+
+        .output {
+            font-weight: bold;
+            color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="mainTitle">COM109 Week 4 - JavaScript Fundamentals</h1>
+
+    <p>
+        This page demonstrates the core JavaScript concepts:
+        variables, data types, operators, functions, events, DOM, console and debugging.
+    </p>
+
+    <!-- SECTION 1 -->
+    <section>
+        <h2>1. JavaScript Alert</h2>
+        <p>Click the button to run your first JavaScript command.</p>
+
+        <button onclick="showWelcomeMessage()">Click Me</button>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section>
+        <h2>2. Variables</h2>
+        <p>Variables store information.</p>
+
+        <button onclick="showVariables()">Show Variables in Console</button>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section>
+        <h2>3. Data Types</h2>
+        <p>JavaScript can store numbers, text and true/false values.</p>
+
+        <button onclick="showDataTypes()">Show Data Types</button>
+
+        <p id="dataTypesOutput" class="output"></p>
+    </section>
+
+    <!-- SECTION 4 -->
+    <section>
+        <h2>4. Operators</h2>
+        <p>Operators allow JavaScript to calculate values.</p>
+
+        <button onclick="calculateNumbers()">Calculate 10 and 5</button>
+
+        <p id="calculationOutput" class="output"></p>
+    </section>
+
+    <!-- SECTION 5 -->
+    <section>
+        <h2>5. Counter Example</h2>
+        <p>This is similar to a Like button on Instagram.</p>
+
+        <button onclick="increaseLikes()">Like 👍</button>
+
+        <p>Total Likes: <span id="likesOutput">0</span></p>
+    </section>
+
+    <!-- SECTION 6 -->
+    <section>
+        <h2>6. Changing HTML Content Using DOM</h2>
+        <p id="changeText">This text will change when the button is clicked.</p>
+
+        <button onclick="changeParagraphText()">Change Text</button>
+    </section>
+
+    <!-- SECTION 7 -->
+    <section>
+        <h2>7. Changing CSS Using JavaScript</h2>
+        <p id="styleText">JavaScript can also change style.</p>
+
+        <button onclick="changeStyle()">Change Style</button>
+    </section>
+
+    <!-- SECTION 8 -->
+    <section>
+        <h2>8. User Input</h2>
+        <p>Type your name and JavaScript will read the value.</p>
+
+        <input type="text" id="studentName" placeholder="Enter your name">
+
+        <button onclick="greetStudent()">Greet Me</button>
+
+        <p id="greetingOutput" class="output"></p>
+    </section>
+
+    <!-- SECTION 9 -->
+    <section>
+        <h2>9. Simple Form Validation</h2>
+        <p>Enter an age. JavaScript will check if it is valid.</p>
+
+        <input type="number" id="ageInput" placeholder="Enter your age">
+
+        <button onclick="checkAge()">Check Age</button>
+
+        <p id="ageOutput" class="output"></p>
+    </section>
+
+    <!-- SECTION 10 -->
+    <section>
+        <h2>10. let vs const</h2>
+        <p>Use console to understand the difference between let and const.</p>
+
+        <button onclick="showLetConst()">Show let and const</button>
+    </section>
+
+    <!-- SECTION 11 -->
+    <section>
+        <h2>11. Scope</h2>
+        <p>Scope controls where variables can be used.</p>
+
+        <button onclick="showScope()">Show Scope in Console</button>
+    </section>
+
+    <!-- SECTION 12 -->
+    <section>
+        <h2>12. Debugging Task</h2>
+        <p>Open Console and observe errors or outputs.</p>
+
+        <button onclick="debugExample()">Run Debug Example</button>
+    </section>
+
+
+    <script>
+
+        /*
+            JavaScript can be written inside the <script> tag.
+
+            In real projects, JavaScript is usually placed in a separate .js file.
+        */
+
+
+        // ----------------------------------------------------
+        // 1. ALERT
+        // ----------------------------------------------------
+
+        function showWelcomeMessage() {
+            alert("Hello COM109! This is JavaScript running.");
+        }
+
+
+        // ----------------------------------------------------
+        // 2. VARIABLES
+        // ----------------------------------------------------
+
+        function showVariables() {
+
+            let studentName = "Vishnu";
+            let moduleName = "Client-Side Development";
+            let weekNumber = 4;
+
+            console.log("Student Name:", studentName);
+            console.log("Module:", moduleName);
+            console.log("Week:", weekNumber);
+
+        }
+
+
+        // ----------------------------------------------------
+        // 3. DATA TYPES
+        // ----------------------------------------------------
+
+        function showDataTypes() {
+
+            let name = "John";          // String
+            let age = 20;              // Number
+            let isStudent = true;      // Boolean
+
+            console.log("Name:", name);
+            console.log("Age:", age);
+            console.log("Is Student:", isStudent);
+
+            document.getElementById("dataTypesOutput").innerHTML =
+                "String: " + name + " | Number: " + age + " | Boolean: " + isStudent;
+
+        }
+
+
+        // ----------------------------------------------------
+        // 4. OPERATORS
+        // ----------------------------------------------------
+
+        function calculateNumbers() {
+
+            let x = 10;
+            let y = 5;
+
+            let addition = x + y;
+            let subtraction = x - y;
+            let multiplication = x * y;
+            let division = x / y;
+            let remainder = 15 % 9;
+
+            console.log("Addition:", addition);
+            console.log("Subtraction:", subtraction);
+            console.log("Multiplication:", multiplication);
+            console.log("Division:", division);
+            console.log("Remainder:", remainder);
+
+            document.getElementById("calculationOutput").innerHTML =
+                "Addition: " + addition +
+                " | Subtraction: " + subtraction +
+                " | Multiplication: " + multiplication +
+                " | Division: " + division +
+                " | Remainder of 15 % 9: " + remainder;
+
+        }
+
+
+        // ----------------------------------------------------
+        // 5. COUNTER / LIKE BUTTON
+        // ----------------------------------------------------
+
+        let likes = 0;
+
+        function increaseLikes() {
+
+            likes = likes + 1;
+
+            console.log("Likes:", likes);
+
+            document.getElementById("likesOutput").innerHTML = likes;
+
+        }
+
+
+        // ----------------------------------------------------
+        // 6. DOM - CHANGE HTML CONTENT
+        // ----------------------------------------------------
+
+        function changeParagraphText() {
+
+            document.getElementById("changeText").innerHTML =
+                "The text has been changed using JavaScript!";
+
+        }
+
+
+        // ----------------------------------------------------
+        // 7. DOM - CHANGE CSS STYLE
+        // ----------------------------------------------------
+
+        function changeStyle() {
+
+            document.getElementById("styleText").style.color = "red";
+            document.getElementById("styleText").style.fontSize = "24px";
+            document.getElementById("styleText").style.fontWeight = "bold";
+
+        }
+
+
+        // ----------------------------------------------------
+        // 8. USER INPUT
+        // ----------------------------------------------------
+
+        function greetStudent() {
+
+            let name = document.getElementById("studentName").value;
+
+            console.log("Entered Name:", name);
+
+            document.getElementById("greetingOutput").innerHTML =
+                "Hello " + name + ", welcome to JavaScript!";
+
+        }
+
+
+        // ----------------------------------------------------
+        // 9. SIMPLE FORM VALIDATION
+        // ----------------------------------------------------
+
+        function checkAge() {
+
+            let age = document.getElementById("ageInput").value;
+
+            console.log("Entered Age:", age);
+
+            if (age === "") {
+
+                document.getElementById("ageOutput").innerHTML =
+                    "Please enter your age.";
+
+            } else if (age < 18) {
+
+                document.getElementById("ageOutput").innerHTML =
+                    "You are under 18.";
+
+            } else {
+
+                document.getElementById("ageOutput").innerHTML =
+                    "You are 18 or above.";
+
+            }
+
+        }
+
+
+        // ----------------------------------------------------
+        // 10. LET VS CONST
+        // ----------------------------------------------------
+
+        function showLetConst() {
+
+            let score = 10;
+            console.log("Original score:", score);
+
+            score = 20;
+            console.log("Updated score using let:", score);
+
+            const university = "QA Higher Education";
+            console.log("University using const:", university);
+
+            // Uncommenting the next line will create an error:
+            // university = "Another University";
+
+        }
+
+
+        // ----------------------------------------------------
+        // 11. SCOPE
+        // ----------------------------------------------------
+
+        let globalMessage = "I am a global variable";
+
+        function showScope() {
+
+            let localMessage = "I am a local variable";
+
+            console.log(globalMessage);
+            console.log(localMessage);
+
+        }
+
+        // localMessage cannot be used here because it exists only inside showScope()
+
+
+        // ----------------------------------------------------
+        // 12. DEBUGGING EXAMPLE
+        // ----------------------------------------------------
+
+        function debugExample() {
+
+            let firstName = "Vishnu";
+            let surname = "Ajith";
+            let age = 28;
+
+            let nextYearAge = age + 1;
+
+            console.log("My first name is " + firstName);
+            console.log("My surname is " + surname);
+            console.log("My age is " + age);
+            console.log("Next year my age will be " + nextYearAge);
+
+        }
+
+    </script>
+
+</body>
+</html>

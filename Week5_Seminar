@@ -1,0 +1,263 @@
+# COM109 Week 5 Lab
+
+# JavaScript Arrays and Conditional Statements
+
+---
+
+## Learning Outcomes
+
+By completing this lab you should be able to:
+
+- Create arrays
+- Access array elements
+- Modify arrays
+- Use push, pop, shift and unshift
+- Create if statements
+- Create if else statements
+- Use switch statements
+- Practice JavaScript problem solving
+
+---
+
+# Lab Task 1
+
+## Predict the Output
+
+Without running the code:
+
+```javascript
+let fruits = [
+    "Apple",
+    "Pear",
+    "Orange"
+];
+
+let shoppingCart = fruits;
+
+shoppingCart.push("Banana");
+
+console.log(fruits.length);
+```
+
+### Questions
+
+1. What will be printed?
+2. Why?
+
+Discuss with your partner before testing.
+
+---
+
+# Lab Task 2
+
+## Creating Arrays
+
+Create an array called:
+
+```javascript
+styles
+```
+
+Initial values:
+
+```javascript
+Jazz
+Blues
+```
+
+---
+
+### Step 1
+
+Display the array.
+
+---
+
+### Step 2
+
+Add:
+
+```javascript
+Rock-n-Roll
+```
+
+to the end.
+
+---
+
+### Step 3
+
+Replace the middle item with:
+
+```javascript
+Classics
+```
+
+---
+
+### Step 4
+
+Remove the first item.
+
+Display the removed value.
+
+---
+
+### Step 5
+
+Add:
+
+```javascript
+Rap
+Reggae
+```
+
+to the beginning.
+
+---
+
+### Expected Output
+
+```text
+Jazz, Blues
+
+Jazz, Blues, Rock-n-Roll
+
+Jazz, Classics, Rock-n-Roll
+
+Classics, Rock-n-Roll
+
+Rap, Reggae, Classics, Rock-n-Roll
+```
+
+---
+
+# Lab Task 3
+
+## JavaScript Official Name
+
+Ask the user:
+
+```text
+What is the official name of JavaScript?
+```
+
+If the answer is:
+
+```text
+ECMAScript
+```
+
+Display:
+
+```text
+Right!
+```
+
+Otherwise display:
+
+```text
+Didn't know? ECMAScript!
+```
+
+---
+
+# Lab Task 4
+
+## Number Checker
+
+Ask the user for a number.
+
+Display:
+
+```text
+1
+```
+
+if greater than zero.
+
+Display:
+
+```text
+-1
+```
+
+if less than zero.
+
+Display:
+
+```text
+0
+```
+
+if equal to zero.
+
+---
+
+# Challenge Task
+
+Rewrite:
+
+```javascript
+if(a + b < 4){
+
+    result = "Below";
+
+}
+else{
+
+    result = "Over";
+
+}
+```
+
+using the ternary operator.
+
+---
+
+# Extension Challenge
+
+Convert:
+
+```javascript
+if
+else if
+else
+```
+
+into a switch statement.
+
+---
+
+# Industry Discussion
+
+Where might arrays be used?
+
+Examples:
+
+- Netflix movie lists
+- Spotify playlists
+- Amazon product catalogues
+- Instagram comments
+- LinkedIn connections
+
+---
+
+# Reflection Questions
+
+1. Why are arrays better than creating many variables?
+2. Why do array indexes start at 0?
+3. When would you use if instead of switch?
+4. How are conditions used in real applications?
+5. What would happen if a website had no conditions?
+
+---
+
+# Submission
+
+Ensure your code:
+
+- Runs without errors
+- Uses meaningful variable names
+- Includes comments
+- Produces the expected output

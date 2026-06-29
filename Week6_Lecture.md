@@ -18,7 +18,7 @@ By the end of today's lecture, you should be able to:
 
 ---
 
-# 🚀 Class Opening (5 Minutes)
+# Class Opening (5 Minutes)
 
 Ask students:
 
@@ -108,7 +108,7 @@ Netflix remembers exactly where you stopped watching using browser storage.
 
 ---
 
-# 🏗 Big Picture
+#  Big Picture
 
 Draw this.
 

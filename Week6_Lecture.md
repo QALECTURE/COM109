@@ -1,246 +1,202 @@
 # COM109 Client-Side Development
 
-# Week 6 – JavaScript Loops
-
-> **Theme of this Week**
->
-> Last week we learned how JavaScript stores information using arrays and makes decisions using conditions.
->
-> This week we answer a new question:
->
-> **"How can a computer perform the same task hundreds or even millions of times without us writing the same code repeatedly?"**
->
-> The answer is **Loops**.
+# Week 6 – JavaScript Functions & Browser Storage
 
 ---
 
-# Learning Outcomes
+# 🎯 Learning Outcomes
 
-By the end of this session, you should be able to:
+By the end of today's lecture, you should be able to:
 
-- Explain what loops are and why they are important.
-- Understand the difference between `while`, `do...while` and `for` loops.
-- Predict the output of loop-based programs.
-- Write simple loops.
-- Understand infinite loops and how to avoid them.
-- Use `break` and `continue`.
-- Solve real-world programming problems using loops.
-
----
-
-# Before We Begin...
-
-Let's think about something.
-
-Imagine you work for **Netflix**.
-
-Netflix has over **18,000 movies and TV shows**.
-
-How would you display them?
-
-Would a programmer write:
-
-```javascript
-console.log("Movie 1");
-console.log("Movie 2");
-console.log("Movie 3");
-...
-console.log("Movie 18000");
-```
-
-Of course not!
-
-Instead, computers repeat the same instructions automatically.
-
-That is exactly what loops do.
+- Explain what a function is.
+- Create and call JavaScript functions.
+- Understand parameters and return values.
+- Explain local and global variables.
+- Understand why websites use Cookies.
+- Explain LocalStorage and SessionStorage.
+- Build reusable JavaScript code.
 
 ---
 
-# Technical Fun Facts
-
-## Fun Fact #1
-
-Google processes **billions of searches every day**.
-
-Every search involves loops behind the scenes.
-
----
-
-## Fun Fact #2
-
-Instagram may display hundreds of comments on one post.
-
-JavaScript loops help display them efficiently.
-
----
-
-## Fun Fact #3
-
-Spotify uses loops to build playlists.
-
-Each song is processed one after another.
-
----
-
-## Fun Fact #4
-
-Amazon loops through products whenever you search for something.
-
-Imagine searching for:
-
-> Wireless Mouse
-
-Amazon checks thousands of products almost instantly.
-
----
-
-# Real World Analogy
-
-Imagine a teacher taking attendance.
-
-Without loops:
-
-```text
-John?
-
-Sarah?
-
-Mike?
-
-Emma?
-
-David?
-
-...
-```
-
-Imagine there are **300 students**.
-
-That would be exhausting.
-
-Instead, the teacher repeats the same question until everyone has been called.
-
-That is exactly how a loop works.
-
----
-
-# Big Picture
-
-Draw this on the board.
-
-```text
-JavaScript
-
-↓
-
-Variables
-
-↓
-
-Conditions
-
-↓
-
-Loops
-
-↓
-
-Automation
-```
-
-Explain:
-
-Variables store information.
-
-Conditions make decisions.
-
-Loops automate repetitive work.
-
----
-
-# What Is A Loop?
-
-A loop repeats a block of code while a condition is true.
-
-Think of it like:
-
-```text
-Start
-
-↓
-
-Check Condition
-
-↓
-
-Do Work
-
-↓
-
-Go Back
-
-↓
-
-Check Again
-
-↓
-
-Repeat
-```
-
----
-
-# Where Are Loops Used?
-
-Students use these applications every day.
-
-| Application | Loop Used For |
-|-------------|--------------|
-| Netflix | Display movies |
-| Amazon | Display products |
-| Spotify | Play playlists |
-| Instagram | Display comments |
-| Google Search | Process results |
-| Facebook | Load posts |
-| YouTube | Show recommended videos |
+# 🚀 Class Opening (5 Minutes)
 
 Ask students:
 
-> Can you think of another application that repeats tasks?
+## Question 1
+
+Imagine you work for Amazon.
+
+When a customer clicks:
+
+```
+Add to Basket
+```
+
+100 times...
+
+Should the developer write:
+
+```javascript
+basket1();
+basket2();
+basket3();
+basket4();
+```
+
+100 different functions?
+
+Students:
+
+"No."
+
+Exactly.
+
+Developers write ONE function.
+
+That function can run hundreds or thousands of times.
+
+That is today's topic.
 
 ---
 
-# Why Do We Need Loops?
+## Question 2
 
-Without loops:
+When you reopen Spotify...
 
-```javascript
-console.log("Hello");
-console.log("Hello");
-console.log("Hello");
-console.log("Hello");
-console.log("Hello");
-```
+How does it remember:
 
-Now imagine printing:
+- Dark Mode
+- Volume
+- Language
+- Last Played Song
+
+Students usually answer:
+
+"It saves it somewhere."
+
+Exactly.
+
+Today we'll learn **where** it saves it.
+
+---
+
+# 💡 Tech Facts
+
+### Fun Fact #1
+
+Google Chrome executes millions of JavaScript functions every second across all open tabs.
+
+---
+
+### Fun Fact #2
+
+React (used by Facebook, Instagram and Netflix) is built almost entirely using JavaScript functions.
+
+---
+
+### Fun Fact #3
+
+Every time you press "Like" on Instagram...
+
+A JavaScript function runs.
+
+---
+
+### Fun Fact #4
+
+Netflix remembers exactly where you stopped watching using browser storage.
+
+---
+
+# 🏗 Big Picture
+
+Draw this.
 
 ```text
-Hello
+Website
+
+↓
+
+HTML
+
+Structure
+
+↓
+
+CSS
+
+Looks Beautiful
+
+↓
+
+JavaScript
+
+Behaviour
+
+↓
+
+Functions
+
+Reusable Code
+
+↓
+
+Browser Storage
+
+Remember Users
 ```
 
-10,000 times.
+Tell students:
 
-Impossible to write manually.
+Last week we learned:
 
-Instead:
-
-```javascript
-for(let i = 0; i < 5; i++){
-
-    console.log("Hello");
-
-}
 ```
+Arrays
+
+Conditions
+
+Loops
+```
+
+Today we learn:
+
+```
+Write Once
+
+Use Forever
+```
+
+---
+
+# 📌 What Is A Function?
+
+Simple explanation:
+
+A function is a reusable block of code.
+
+Instead of writing the same instructions again and again...
+
+We write them once.
+
+---
+
+# ☕ Real World Analogy
+
+Coffee Machine
+
+```
+Press Button
+
+↓
+
+Machine Makes Coffee
+```
+
+Every time you press...
+
+The same instructions run.
+
+Functions work exactly the same way.
 
 ---
 
@@ -248,774 +204,808 @@ for(let i = 0; i < 5; i++){
 
 Ask:
 
-> If I wanted to print "QA" 1000 times...
+Why don't coffee machines need a new program every time someone wants coffee?
 
-Would I write:
+Students:
+
+Because the instructions already exist.
+
+Exactly.
+
+Functions are reusable instructions.
+
+---
+
+# Function Declaration
+
+General structure:
 
 ```javascript
-console.log("QA");
+function sayHello(){
+
+}
 ```
 
-1000 times?
+Explain each part.
 
-Students should answer:
+```
+function
 
-> No.
+↓
+
+Tells JavaScript we are creating a function
+
+↓
+
+sayHello
+
+↓
+
+Function Name
+
+↓
+
+()
+
+↓
+
+Parameters
+
+↓
+
+{}
+
+↓
+
+Instructions
+```
+
+---
+
+# Live Demo
+
+```javascript
+function sayHello(){
+
+    console.log("Hello COM109");
+
+}
+```
+
+Ask students:
+
+Will this print anything?
+
+Students:
+
+Maybe.
+
+Run it.
+
+Nothing happens.
+
+---
+
+Explain:
+
+Creating a function DOES NOT execute it.
+
+---
+
+# Function Calling
+
+Now show:
+
+```javascript
+sayHello();
+```
+
+Output:
+
+```
+Hello COM109
+```
+
+---
+
+Ask:
+
+What changed?
+
+Students:
+
+We called the function.
 
 Exactly.
 
 ---
 
-# Understanding Loop Components
+Call it again.
 
-Every loop has three parts.
-
-```text
-Start
-
-↓
-
-Condition
-
-↓
-
-Update
+```javascript
+sayHello();
+sayHello();
+sayHello();
 ```
+
+Students immediately understand:
+
+Write once.
+
+Reuse forever.
+
+---
+
+# Real World Example
+
+Imagine Netflix.
+
+Instead of creating
+
+```
+playMovie1()
+
+playMovie2()
+
+playMovie3()
+```
+
+They use:
+
+```javascript
+playMovie();
+```
+
+Again and again.
+
+---
+
+# Local Variables
+
+Ask:
+
+Can everyone access your bedroom?
+
+No.
+
+Only you.
+
+---
 
 Draw:
 
-```text
-Start
+```
+House
 
 ↓
 
-Check
+Bedroom
 
 ↓
 
-Run Code
-
-↓
-
-Increase Counter
-
-↓
-
-Repeat
+Private
 ```
 
----
+Now explain:
 
-# While Loop
+Variables created inside a function are private.
 
-The simplest loop.
-
-Syntax:
+Example:
 
 ```javascript
-while(condition){
+function student(){
 
-    // code
+    let name = "John";
+
+    console.log(name);
 
 }
 ```
 
----
-
-## Example
+Outside:
 
 ```javascript
-let i = 1;
-
-while(i <= 5){
-
-    console.log(i);
-
-    i++;
-
-}
+console.log(name);
 ```
+
+Produces an error.
 
 ---
-
-# Walk Through Slowly
-
-Initial value:
-
-```text
-i = 1
-```
 
 Question:
 
-Is
+Why?
 
-```text
-1 <= 5
+Because the variable only exists inside the function.
+
+---
+
+# Outer (Global) Variables
+
+Now explain.
+
+Outside:
+
+```javascript
+let university = "QA";
 ```
 
-True?
+Function:
+
+```javascript
+function welcome(){
+
+    console.log(university);
+
+}
+```
+
+Works perfectly.
+
+Explain:
+
+Functions can access variables created outside them.
+
+---
+
+Real World Example
+
+Imagine:
+
+```
+Classroom
+
+↓
+
+Projector
+
+Everyone can use it.
+```
+
+Global.
+
+```
+Student Notebook
+
+↓
+
+Only that student.
+```
+
+Local.
+
+---
+
+# Parameters
+
+Ask:
+
+Can one coffee machine make:
+
+- Small
+- Medium
+- Large
 
 Yes.
 
-Print:
+How?
 
-```text
-1
+It receives instructions.
+
+Functions work the same way.
+
+---
+
+Example:
+
+```javascript
+function greet(name){
+
+    console.log("Hello " + name);
+
+}
 ```
 
-Increase.
+Now call:
 
-```text
-i = 2
+```javascript
+greet("John");
+greet("Sarah");
+greet("Mike");
 ```
 
-Repeat.
+Explain:
 
-Continue until:
+The function stays the same.
 
-```text
-i = 6
+Only the input changes.
+
+---
+
+Student Activity
+
+Create:
+
+```javascript
+function welcome(student){
+
+    console.log("Welcome " + student);
+
+}
+```
+
+Try it with your own name.
+
+---
+
+# Default Parameters
+
+Question:
+
+What if someone forgets to enter their name?
+
+Instead of showing:
+
+```
+Hello undefined
+```
+
+We provide a default.
+
+```javascript
+function greet(name="Guest"){
+
+    console.log(name);
+
+}
+```
+
+Call:
+
+```javascript
+greet();
+```
+
+Output:
+
+```
+Guest
+```
+
+---
+
+# Return Values
+
+Ask:
+
+What does a calculator do?
+
+Students:
+
+Returns an answer.
+
+Exactly.
+
+Functions can return answers too.
+
+---
+
+Example
+
+```javascript
+function add(a,b){
+
+    return a+b;
+
+}
 ```
 
 Now:
 
-```text
-6 <= 5
+```javascript
+let answer = add(5,3);
+
+console.log(answer);
 ```
 
-False.
+Output
 
-Loop stops.
+```
+8
+```
 
----
+Explain:
 
-# Flow Diagram
-
-```text
-Start
-
-↓
-
-i = 1
+```
+Input
 
 ↓
 
-Condition
+Process
 
 ↓
 
-True?
-
-↓
-
-Print
-
-↓
-
-Increase i
-
-↓
-
-Back to Condition
-
-↓
-
-False?
-
-↓
-
-Stop
+Return Result
 ```
 
 ---
 
-# Real World Example
+# Good Function Names
 
-Imagine a security guard checking IDs.
+Show:
 
-```text
-Student arrives
-
-↓
-
-Check ID
-
-↓
-
-Valid?
-
-↓
-
-Allow Entry
-
-↓
-
-Next Student
-
-↓
-
-Repeat
 ```
+calculateTotal()
+
+showMessage()
+
+checkAge()
+
+createAccount()
+
+getUser()
+```
+
+Explain:
+
+Good names explain exactly what the function does.
 
 ---
 
-# Common Beginner Mistake
+Bad example:
+
+```
+abc()
+
+test()
+
+hello()
+
+x()
+```
+
+Students should avoid these.
+
+---
+
+# One Function = One Job
+
+Ask:
+
+Should one function:
+
+```
+Login User
+
+↓
+
+Print Receipt
+
+↓
+
+Play Music
+
+↓
+
+Send Email
+```
+
+Students laugh.
+
+Answer:
+
+No.
+
+One function should perform ONE task.
+
+---
+
+# Function Expressions
+
+Simple explanation.
+
+Instead of:
 
 ```javascript
-let i = 1;
-
-while(i <= 5){
-
-    console.log(i);
+function greet(){
 
 }
 ```
 
-Question:
+We can also write:
 
-What is missing?
+```javascript
+let greet = function(){
+
+};
+```
+
+Both create functions.
+
+---
+
+# Callback Functions
+
+Keep this simple.
+
+Don't go deep.
+
+Ask:
+
+Imagine ordering food.
+
+You place an order.
+
+Do you get it immediately?
+
+No.
+
+Restaurant prepares it first.
+
+Later...
+
+It arrives.
+
+That is similar to a callback.
+
+JavaScript says:
+
+```
+Do this later.
+```
+
+Example:
+
+```javascript
+button.onclick = function(){
+
+    alert("Clicked");
+
+};
+```
+
+---
+
+# Browser Storage
+
+Ask:
+
+How does Netflix remember:
+
+```
+Continue Watching
+```
 
 Students:
 
-```text
-i++
-```
+Storage.
 
 Exactly.
 
-Without it, the loop never ends.
-
 ---
 
-# Infinite Loops
+# Cookies
 
-Explain:
+Cookies are tiny pieces of information stored by the browser.
 
-An infinite loop never stops.
+Usually used for:
 
-Example:
+- Login
+- Authentication
+- Remember Me
 
-```javascript
-while(true){
+Diagram:
 
-    console.log("Hello");
-
-}
 ```
+Login
 
-Never write loops like this unless you intentionally want them.
+↓
 
----
+Server
 
-# Do...While Loop
+↓
 
-Unlike the while loop...
+Cookie Created
 
-A do...while loop always runs **at least once**.
+↓
 
-Syntax:
+Browser Stores Cookie
 
-```javascript
-do{
+↓
 
-    // code
+Next Visit
 
-}
-while(condition);
+↓
+
+Already Logged In
 ```
 
 ---
 
-## Example
+# LocalStorage
 
-```javascript
-let number = 1;
+Think:
 
-do{
+```
+Permanent Notebook
+```
 
-    console.log(number);
+Stored until deleted.
 
-    number++;
+Example uses:
 
-}
-while(number <= 5);
+- Dark Mode
+- Language
+- Username
+- Shopping Basket
+
+---
+
+# SessionStorage
+
+Think:
+
+```
+Whiteboard
+
+↓
+
+Erase when class ends
+```
+
+Stored only while the browser tab is open.
+
+---
+
+# Comparison
+
+| Feature | Cookies | LocalStorage | SessionStorage |
+|----------|----------|--------------|----------------|
+| Login | ✅ | ❌ | ❌ |
+| Dark Mode | ❌ | ✅ | ❌ |
+| Basket | ✅ | ✅ | ❌ |
+| Temporary Form | ❌ | ❌ | ✅ |
+
+---
+
+# Class Discussion
+
+Ask:
+
+Where would you store:
+
+✅ Dark Mode
+
+Students:
+
+LocalStorage
+
+---
+
+Login Token
+
+Students:
+
+Cookie
+
+---
+
+Temporary Quiz Answers
+
+Students:
+
+SessionStorage
+
+---
+
+# Today's Key Takeaways
+
+```
+Functions
+
+↓
+
+Reusable Code
+
+↓
+
+Parameters
+
+↓
+
+Input
+
+↓
+
+Return
+
+↓
+
+Output
+
+↓
+
+Cookies
+
+↓
+
+Remember Login
+
+↓
+
+LocalStorage
+
+↓
+
+Remember User Preferences
+
+↓
+
+SessionStorage
+
+↓
+
+Temporary Storage
 ```
 
 ---
 
-# Real World Example
+# Before the Lab
 
-ATM Machine
+Ask these questions.
 
-```text
-Insert Card
-
-↓
-
-Show Menu
-
-↓
-
-Check Choice
-
-↓
-
-Continue?
-
-↓
-
-Repeat
-```
-
-The menu appears **before** checking whether the customer wants another transaction.
-
----
-
-# While vs Do...While
-
-| while | do...while |
-|---------|------------|
-| Checks condition first | Runs first |
-| May never execute | Always executes once |
-
-Ask students:
-
-Which one would an ATM use?
+1. Why do developers use functions?
 
 Answer:
 
-do...while
+To avoid repeating code.
 
 ---
 
-# The For Loop
-
-This is the loop used most often in JavaScript.
-
-Syntax:
-
-```javascript
-for(let i = 0; i < 5; i++){
-
-    console.log(i);
-
-}
-```
-
----
-
-# Breaking It Down
-
-```javascript
-let i = 0;
-```
-
-Starting point.
-
----
-
-```javascript
-i < 5
-```
-
-Condition.
-
----
-
-```javascript
-i++
-```
-
-Increase the counter.
-
----
-
-# Flow Diagram
-
-```text
-Start
-
-↓
-
-Initialise
-
-↓
-
-Condition
-
-↓
-
-Run Code
-
-↓
-
-Increment
-
-↓
-
-Repeat
-```
-
----
-
-# Interactive Activity
-
-Ask students:
-
-How many numbers will be printed?
-
-```javascript
-for(let i = 0; i < 3; i++){
-
-    console.log(i);
-
-}
-```
+2. What is the difference between local and global variables?
 
 Answer:
 
-```text
-0
+Local variables only exist inside the function.
 
-1
-
-2
-```
-
-Three values.
+Global variables can be accessed anywhere.
 
 ---
 
-# Even Numbers Example
+3. What is a parameter?
 
-```javascript
-for(let i = 2; i <= 10; i += 2){
+Answer:
 
-    console.log(i);
-
-}
-```
-
-Output:
-
-```text
-2
-
-4
-
-6
-
-8
-
-10
-```
-
-Ask students:
-
-Why are we increasing by **2** instead of **1**?
+Information passed into a function.
 
 ---
 
-# Looping Through Arrays
+4. What does return do?
 
-This is one of the most common programming patterns.
+Answer:
 
-```javascript
-let fruits = [
-
-    "Apple",
-
-    "Orange",
-
-    "Banana"
-
-];
-
-for(let i = 0; i < fruits.length; i++){
-
-    console.log(fruits[i]);
-
-}
-```
-
-Explain:
-
-The loop visits each item inside the array.
+Sends a result back.
 
 ---
 
-# Real World Example
+5. Which storage remembers dark mode?
 
-Spotify Playlist
+Answer:
 
-```text
-Song 1
-
-↓
-
-Song 2
-
-↓
-
-Song 3
-
-↓
-
-Song 4
-
-↓
-
-Finished
-```
-
-Exactly the same idea.
+LocalStorage.
 
 ---
 
-# break Statement
+6. Which storage is usually used for login?
 
-Sometimes we want to stop early.
+Answer:
 
-Example:
-
-```javascript
-for(let i = 0; i < 10; i++){
-
-    if(i == 5){
-
-        break;
-
-    }
-
-    console.log(i);
-
-}
-```
-
-Output:
-
-```text
-0
-
-1
-
-2
-
-3
-
-4
-```
-
-Loop stops at 5.
+Cookies.
 
 ---
 
-# continue Statement
+7. Which storage disappears after closing the browser tab?
 
-Instead of stopping...
+Answer:
 
-Skip only one iteration.
-
-```javascript
-for(let i = 0; i < 6; i++){
-
-    if(i == 3){
-
-        continue;
-
-    }
-
-    console.log(i);
-
-}
-```
-
-Output:
-
-```text
-0
-
-1
-
-2
-
-4
-
-5
-```
-
-3 is skipped.
-
----
-
-# Real World Example
-
-Teacher Taking Attendance
-
-```text
-Student Absent
-
-↓
-
-Skip
-
-↓
-
-Next Student
-```
-
-That is exactly how continue works.
-
----
-
-# Live Coding Session
-
-## Demo 1
-
-Print numbers 1–5 using while.
-
----
-
-## Demo 2
-
-Print your name five times.
-
----
-
-## Demo 3
-
-Use a do...while loop.
-
----
-
-## Demo 4
-
-Create a simple for loop.
-
----
-
-## Demo 5
-
-Print even numbers.
-
----
-
-## Demo 6
-
-Loop through an array of student names.
-
----
-
-## Demo 7
-
-Use break.
-
----
-
-## Demo 8
-
-Use continue.
-
----
-
-# Common Beginner Mistakes
-
-❌ Forgetting to increase the counter.
-
-❌ Creating an infinite loop.
-
-❌ Starting arrays at index 1 instead of 0.
-
-❌ Forgetting the loop condition.
-
-❌ Confusing `<` with `<=`.
-
----
-
-# Career Connection
-
-Every software developer uses loops.
-
-Examples:
-
-- Frontend Developer
-- Backend Developer
-- Game Developer
-- AI Engineer
-- Data Scientist
-- Mobile App Developer
-- Cyber Security Engineer
-
-Whenever software needs to process many pieces of information...
-
-Loops are used.
-
----
-
-# Reflection Questions
-
-Discuss these with the class.
-
-1. Why are loops better than writing the same code repeatedly?
-2. What is the difference between `while` and `for`?
-3. When would you use a `do...while` loop?
-4. Why is an infinite loop dangerous?
-5. Where have you used loops today without realising it?
-
----
-
-# End of Lecture Summary
-
-```text
-Variables
-↓
-
-Store Data
-
-Conditions
-↓
-
-Make Decisions
-
-Loops
-↓
-
-Repeat Tasks
-
-Arrays + Loops
-↓
-
-Process Multiple Items Automatically
-```
-
-## Key Takeaways
-
-✅ Loops automate repetitive tasks.
-
-✅ `while` checks the condition first.
-
-✅ `do...while` runs at least once.
-
-✅ `for` is the most commonly used loop.
-
-✅ `break` stops a loop.
-
-✅ `continue` skips one iteration.
-
-✅ Loops are used in almost every modern application, from Netflix and Amazon to Google and Spotify.
-
----
-
-# Preview of Next Week
-
-Next week we will combine everything we have learned:
-
-- Variables
-- Arrays
-- Conditions
-- Loops
-- Functions
-- DOM Manipulation
-
-to build more interactive web applications where JavaScript responds to user actions in real time.
+SessionStorage.
